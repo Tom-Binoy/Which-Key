@@ -11,8 +11,6 @@ img_x = 100;
 img_y = 100;
 
 function load(){
-	row = '<canvas id="myCanvas" width="'+screen.width+'" height="'+screen.height+'">'
-	document.getElementById("screen").innerHTML = row;
 	img_image = "bgi.jpg";
 	add()
 }
