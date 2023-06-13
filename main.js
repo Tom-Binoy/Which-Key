@@ -35,7 +35,6 @@ function my_keydown(e)
 	console.log(keyPressed);
 	
 		if((keyPressed >=97 && keyPressed<=122)|| (keyPressed >=65 && keyPressed<=90)){
-		//write a code to check the type of key pressed
 		alphabetkey()
 		}
 		else if(keyPressed >=48 && keyPressed<=57){
