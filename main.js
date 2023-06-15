@@ -11,18 +11,20 @@ img_x = 100;
 img_y = 100;
 
 function ok(){
+	console.log("ok loaded");
 	img_image = "bgi.jpg";
 	add()
 }
 
 function add() {
+	consol.log("add function loaded");
 	img_imgTag = new Image(); //defining a variable with a new image
 	img_imgTag.onload = uploadimg; // setting a function, onloading this variable
 	img_imgTag.src = img_image;   // load image
 }
 
 function uploadimg() {
-
+	consol.log("uploadimg loaded")
 	ctx.drawImage(img_imgTag, img_x, img_y, img_width, img_height);
 }
 
@@ -30,6 +32,7 @@ function uploadimg() {
 window.addEventListener("keydown",my_keydown);
 
 function my_keydown(e)
+console.log('my_keydown');
 {
 	keyPressed = e.keyCode;
 	console.log(keyPressed);
@@ -38,42 +41,46 @@ function my_keydown(e)
 		alphabetkey()
 		}
 		else if(keyPressed >=48 && keyPressed<=57){
+			console.log('no. key selected)
 			numberkey()
 		}
 		else if(keyPressed >=37 && keyPressed<=40){
+			console.log('arrow key selected')
 			arrowkey()
 		}
 		else if(keyPressed =17 || keyPressed = 18 || keyPressed = 27){
+			console.log('special keyselected')
 			specialkey()
 		}
 	    else{
+		console.log('other key selected')
 		otherkey();
 		}
 }
 
 function alphabetkey()
-{
+{	console.log('alphabet key received)
 	//upload respective image with the message. 
 	img_image="alphabet key.jpg";
 	add();
 }
 function numberkey()
-{
+{	console.log('no. key received')
 	img_image="no.png";
 	add();
 }
 function arrowkey()
-{
+{	console.log('arrow key received')
 	img_image="arrow.png";
 	add();
 }
 function specialkey()
-{
+{	console.log('special key received')
   	img_image="special.png";
 	add();	
 }
 function otherkey()
-{
+{	console.log('other key received')
 	img_image="other.png";
 	add();
 }
