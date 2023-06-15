@@ -10,7 +10,7 @@ var img_image;
 img_x = 100;
 img_y = 100;
 
-function load(){
+function ok(){
 	img_image = "bgi.jpg";
 	add()
 }
