@@ -1,6 +1,9 @@
 canvas = document.getElementById("myCanvas");
 ctx = canvas.getContext("2d");
 
+synth = window.speechSynthesis
+key ="";
+
 img_width = 300;
 img_height = 100;
 
@@ -22,6 +25,12 @@ function uploadimg() {
 	console.log("uploadimg loaded")
 	var body = document.body;
     body.style.backgroundImage = "url('"+img_image+"')";
+	
+	key1 = "The Key you pressed is "+key
+	utter = new SpeechSynthesisUtterance(key1)
+	synth.speak(utter)
+	
+	timer()
 }
 
 //Write a code to grab the key-pressed event
@@ -58,25 +67,38 @@ function alphabetkey()
 {	console.log('alphabet key received')
 	//upload respective image with the message. 
 	img_image="alphabet key.jpg";
+	key = "Alphabet Key"
 	add();
 }
 function numberkey()
 {	console.log('no. key received')
 	img_image="no.png";
+	key = "number Key"
 	add();
 }
 function arrowkey()
 {	console.log('arrow key received')
 	img_image="arrow.png";
+	key = "arrow Key"
 	add();
 }
 function specialkey()
 {	console.log('special key received')
   	img_image="special.png";
+	  key = "special Key"
 	add();	
 }
 function otherkey()
 {	console.log('other key received')
 	img_image="other.png";
+	key = "in other Key"
 	add();
+}
+
+function timer(){
+	
+	setTimeout(function(){
+		var body = document.body;
+    body.style.backgroundImage = "url('bgi.jpg')";
+	}, 5000);
 }
