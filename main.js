@@ -1,4 +1,3 @@
-// Create a reference for the canvas
 canvas = document.getElementById("myCanvas");
 ctx = canvas.getContext("2d");
 
@@ -10,30 +9,27 @@ var img_image;
 img_x = 100;
 img_y = 100;
 
-function ok(){
-	console.log("ok loaded");
-	img_image = "bgi.jpg";
-	add()
-}
 
+img_image = "bgi.jpg";
 function add() {
-	consol.log("add function loaded");
+	console.log("add function loaded");
 	img_imgTag = new Image(); //defining a variable with a new image
 	img_imgTag.onload = uploadimg; // setting a function, onloading this variable
 	img_imgTag.src = img_image;   // load image
 }
 
 function uploadimg() {
-	consol.log("uploadimg loaded")
-	ctx.drawImage(img_imgTag, img_x, img_y, img_width, img_height);
+	console.log("uploadimg loaded")
+	var body = document.body;
+    body.style.backgroundImage = "url('"+img_image+"')";
 }
 
 //Write a code to grab the key-pressed event
 window.addEventListener("keydown",my_keydown);
 
-function my_keydown(e)
-console.log('my_keydown');
-{
+function my_keydown(e){
+ console.log('my_keydown');
+
 	keyPressed = e.keyCode;
 	console.log(keyPressed);
 	
@@ -41,14 +37,14 @@ console.log('my_keydown');
 		alphabetkey()
 		}
 		else if(keyPressed >=48 && keyPressed<=57){
-			console.log('no. key selected)
+			console.log('no. key selected')
 			numberkey()
 		}
 		else if(keyPressed >=37 && keyPressed<=40){
 			console.log('arrow key selected')
 			arrowkey()
 		}
-		else if(keyPressed =17 || keyPressed = 18 || keyPressed = 27){
+		else if(keyPressed == 17 || keyPressed == 18 || keyPressed == 27){
 			console.log('special keyselected')
 			specialkey()
 		}
@@ -59,7 +55,7 @@ console.log('my_keydown');
 }
 
 function alphabetkey()
-{	console.log('alphabet key received)
+{	console.log('alphabet key received')
 	//upload respective image with the message. 
 	img_image="alphabet key.jpg";
 	add();
@@ -84,4 +80,3 @@ function otherkey()
 	img_image="other.png";
 	add();
 }
-	

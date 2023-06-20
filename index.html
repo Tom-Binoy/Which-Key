@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html>
 <head>
 <style>
@@ -9,10 +8,9 @@ body{
 }
 #myCanvas
 {
-    margin-top: 10px;
-	border-width:40px;
-	background-color: white; 
-	border-style:ridge;
+    Background-color: none; 
+	height: 100%;
+	width: 100%;
 }
 
 h1,h4
@@ -29,13 +27,13 @@ h1,h4
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 	<title>ASCII value</title>
 </head>
-<body onload="ok()" background="bgi.jpg">
+<body id="b" background="bgi.jpg">
 
 <center id="screen">
-	<h1>Keyboard keys</h1> 
-	<canvas id="myCanvas" width="500" height="300"> </canvas> 
+
+	<canvas id="myCanvas"> </canvas> 
 	<div id="d1"></div> 
-	<h4> <b class="text-danger">NOTE : </b> PRESS ANY KEYBOARD KEY </h4>
+	
 
 
 </center>
