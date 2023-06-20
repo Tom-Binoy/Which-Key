@@ -26,10 +26,6 @@ function uploadimg() {
 	var body = document.body;
     body.style.backgroundImage = "url('"+img_image+"')";
 	
-	key1 = "The Key you pressed is "+key
-	utter = new SpeechSynthesisUtterance(key1)
-	synth.speak(utter)
-	
 	timer()
 }
 
@@ -96,7 +92,10 @@ function otherkey()
 }
 
 function timer(){
-	
+	key1 = "The Key you pressed is "+key
+	utter = new SpeechSynthesisUtterance(key1)
+	synth.speak(utter)
+
 	setTimeout(function(){
 		var body = document.body;
     body.style.backgroundImage = "url('bgi.jpg')";
